@@ -16,7 +16,7 @@ render_atividades(atividades); {
     let conteudoHtml = '';
     
 
-    for (i = 0; < atividades.length; i++) {
+    for (i = 0; i < atividades.length; i++) {
         conteudoHtml += `
         <div class="atividade">
             ${atividades[i].tipo} |
