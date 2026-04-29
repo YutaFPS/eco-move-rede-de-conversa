@@ -7,53 +7,35 @@
     <link rel="stylesheet" href="front.css">
 </head>
 <body>
-    <div id="main">
-        <div id="button">
-            <button>Login</button>
-        </div>
+            <aside id="aside">
 
-        <div id="nav">
-            <a href="#">Bicicleta</a>
-            <a href="#">Caminhada</a>
-            <a href="#">Transporte Público</a>
-        </div>
+            </aside>
 
-        <div id="conteudo">
-            <div class="card">
-                <img src="fd0a7888a1165a085fabf22a1ac3fd41.jpg" alt="photo">
-                <div id="names">
-                    <div class="username">John Doe</div>
-                    <div class="info">
-                        <div id="distancia"> 0Km</div>
-                        <div id="tempo"> 0min</div>
-                        <div id="economizado"> 0L</div>
-                    </div>
-                    <div id="hora">06:07 - 06/07/2027</div>
+            <div id="right">
+                <div id="main" name="main">
+                    <form id="fa" name="atividades">
+                        <select name="tipo" class="input">
+                            <option value="bicicleta">Bicicleta</option>
+                            <option value="caminhada">Caminhada</option>
+                            <option value="transportepublico">Transporte Público</option>
+                        </select>
+                            
+                            <input type="text" class="input" name="nome" placeholder="Nome">
+                            <input type="number" class="input" name="distancia_metros" placeholder="Distância (metros)">
+                            <input type="number" class="input" name="duracao_minutos" placeholder="Duração (minutos)">
+                            <input type="text" class="input" name="foto_url" placeholder="Foto">
+                            <input type="number" class="input" name="co2_kg" placeholder="Emissão de CO2 (kg)">
+
+                            <input type="submit" value="Enviar" onClick="post_atividades">
+
+                        </select>
+                     
+                    </form>
                 </div>
             </div>
-        </div>
 
-        <div id="pages">
+           
 
-        </div>
-    </div>
-
-    <div id="aside">
-        <div id="perfil">
-            <div id="logo">
-
-            </div>
-
-            <div id="atividades">
-
-            </div>
-
-        </div>
-
-        <div id="footer">
-
-        </div>
-    </div>
     <script src="front.js"></script>
 </body>
 </html>

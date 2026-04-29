@@ -1,27 +1,38 @@
-async function get_atividades() {
+async function post_atividades() {
     const res = await fetch(
-        'http://localhost:3000/atividades',
+        'http://localhost:3001/atividades',
         {
-            method : 'GET',
-            headers: {'Content-Type' : 'appication/json'},
+            method : 'POST',
+            headers: {'Content-Type' : 'application/json'},
             body   : ''
         }
     );
 }
 
-let atividades = await res.json();
-console.log(atividades);
-render_atividades(atividades); {
+async function get_atividades() {
+    const res = await fetch(
+        'http://localhost:3001/atividades'
+    );
+
+    let atividades = await res.json();
+    console.log(atividades);
+    render_atividades(atividades);
+}
+
+
+function render_atividades(atividades) {
     const main = document.getElementById('main');
     let conteudoHtml = '';
     
 
     for (i = 0; i < atividades.length; i++) {
         conteudoHtml += `
-        <div class="atividade">
+        <div class="atividades">
+            ${atividades[i].nome} |
             ${atividades[i].tipo} |
             ${atividades[i].distancia_metros} |
             ${atividades[i].duracao_minutos} |
+            ${atividades[i].foto_url} |
             ${atividades[i].co2_kg} CO2
         </div>
         `
@@ -30,3 +41,4 @@ render_atividades(atividades); {
     main.innerHTML += conteudoHtml;
 }
 get_atividades();
+post_atividades();

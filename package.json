@@ -9,7 +9,7 @@
   "name": "eco-move-rede-de-conversa",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -25,5 +25,8 @@
     "url": "https://github.com/YutaFPS/eco-move-rede-de-conversa/issues"
   },
   "homepage": "https://github.com/YutaFPS/eco-move-rede-de-conversa#readme",
-  "devDependencies": {}
+  "devDependencies": {
+  
+
+  }
 }
